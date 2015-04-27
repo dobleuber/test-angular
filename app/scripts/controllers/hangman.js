@@ -36,7 +36,7 @@ angular.module('testAngularApp')
             ? 'win' :
             errors >= 5
                 ? 'lose':
-                progress;
+                'progress';
       };
 
   });
