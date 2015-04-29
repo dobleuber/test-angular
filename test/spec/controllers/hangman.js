@@ -7,7 +7,7 @@ describe('Controller: HangmanCtrl', function () {
 
   var HangmanCtrl,
     scope,
-      worldGenerator = {
+      wordGenerator = {
         getWord : function(){
           return 'Hola';
         }
@@ -18,7 +18,7 @@ describe('Controller: HangmanCtrl', function () {
     scope = $rootScope.$new();
     HangmanCtrl = $controller('HangmanCtrl', {
       $scope: scope,
-      worldGenerator : worldGenerator
+      wordGenerator : wordGenerator
     });
   }));
 

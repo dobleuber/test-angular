@@ -8,21 +8,22 @@
  * Controller of the testAngularApp
  */
 angular.module('testAngularApp')
-  .controller('HangmanCtrl', function ($scope, worldGenerator) {
-      $scope.secretWord = worldGenerator.getWord();
+  .controller('HangmanCtrl', function ($scope, wordGenerator) {
+      $scope.secretWord = wordGenerator.getWord();
       var secretWord = $scope.secretWord.toLowerCase();
     $scope.worldLength = function () {
       return $scope.secretWord.length;
     };
 
       $scope.isValid = function(){
+        $scope.result;
         if(secretWord.indexOf($scope.chosenChar) > -1) {
           secretWord = secretWord.replace($scope.chosenChar, '');
-          return true
+          return $scope.result = true
         }
 
         errors++;
-        return false;
+        return $scope.result = false;
       };
 
       var errors = 0;

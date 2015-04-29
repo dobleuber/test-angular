@@ -19,7 +19,7 @@ describe('Protractor Demo App', function() {
       browser.get('index.html#/hangman');
       chosenInput = element(by.model('chosenChar'));
       valButton = element(by.css('.btn-primary'));
-      var resultLabel = element(by.binding('secretWord'))
+      resultLabel = element(by.binding('result'))
     });
 
     it('Should be exists one input[text]', function(){
